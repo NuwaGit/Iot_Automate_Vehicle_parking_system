@@ -1,0 +1,9 @@
+2026-01-18 07:11:51,203 - __main__ - INFO - Initializing parking system components...
+2026-01-18 07:11:51,203 - config_manager - INFO - Configuration loaded from /home/sadeep/Desktop/self/ashika/parking_system_current/raspberry_pi/config.json
+2026-01-18 07:11:51,203 - data_manager - INFO - Initialized data/vehicles.json
+2026-01-18 07:11:51,203 - data_manager - INFO - Initialized data/history.json
+2026-01-18 07:11:51,203 - __main__ - INFO - Parking system initialized
+2026-01-18 07:11:51,204 - __main__ - INFO - Starting parking system...
+2026-01-18 07:11:51,211 - serial_comm - ERROR - Unexpected error during connection: Could not auto-detect ESP32 serial port
+2026-01-18 07:11:51,212 - __main__ - ERROR - Failed to connect to ESP32. Please check connections.
+2026-01-18 07:11:51,212 - camera_handler - INFO - Frame processing stopped

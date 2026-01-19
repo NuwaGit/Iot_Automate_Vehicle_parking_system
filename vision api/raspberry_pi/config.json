@@ -1,0 +1,19 @@
+{
+  "entry_zone": {
+    "x1": 39,
+    "y1": 130,
+    "x2": 362,
+    "y2": 505
+  },
+  "exit_zone": {
+    "x1": 874,
+    "y1": 118,
+    "x2": 1189,
+    "y2": 444
+  },
+  "entry_virtual_line_position": 0.4125,
+  "exit_virtual_line_position": 0.36944444444444446,
+  "frame_width": 1280,
+  "frame_height": 720,
+  "motion_threshold": 500
+}

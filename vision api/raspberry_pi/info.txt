@@ -1,0 +1,90 @@
+python3 configure_zones.py --camera 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create a detailed electronic circuit diagram for a parking management system showing:
+
+MAIN COMPONENTS:
+1. Raspberry Pi 4 (USB-C power port, USB ports, GPIO pins visible)
+2. ESP32 Dev Board (micro-USB port, GPIO pins labeled)
+3. LM2596 Buck Converter Module (input/output terminals visible)
+4. 12V DC Power Adapter
+5. 1 USB Web Camera
+6. 1 IR Sensor Module (3 pins: VCC, GND, OUT)
+7. 2 SG90 Servo Motors (each with 3 wires: Red/VCC, Brown/GND, Orange/Signal)
+8. 1 Active Buzzer (2 terminals: + and -)
+9. 10kΩ Resistor
+10. 220Ω Resistor
+11. Breadboard (with power rails)
+
+POWER SUPPLY CONNECTIONS:
+- 12V DC Adapter positive (IN+) connected to LM2596 IN+ terminal
+- 12V DC Adapter negative (IN-) connected to LM2596 IN- terminal
+- LM2596 OUT+ (5V) connected to breadboard positive rail (red rail)
+- LM2596 OUT- (GND) connected to breadboard negative rail (blue/black rail)
+- Raspberry Pi powered via USB-C (5V, 3A adapter - show separately)
+
+ESP32 POWER:
+- ESP32 VIN pin connected to LM2596 5V rail (optional - can also use USB)
+- ESP32 GND pin connected to common GND rail
+
+IR SENSOR (Parking Slot Detection):
+- IR Sensor VCC pin connected to 5V rail
+- IR Sensor GND pin connected to GND rail
+- IR Sensor OUT pin connected to ESP32 GPIO 2
+- 10kΩ pull-up resistor connected between ESP32 GPIO 2 and 3.3V (from ESP32)
+
+ENTRY GATE SERVO MOTOR (SG90):
+- Servo Red wire (VCC) connected to LM2596 5V rail (NOT ESP32)
+- Servo Brown/Black wire (GND) connected to GND rail
+- Servo Orange/Yellow wire (Signal) connected to ESP32 GPIO 13
+
+EXIT GATE SERVO MOTOR (SG90):
+- Servo Red wire (VCC) connected to LM2596 5V rail (NOT ESP32)
+- Servo Brown/Black wire (GND) connected to GND rail
+- Servo Orange/Yellow wire (Signal) connected to ESP32 GPIO 12
+
+BUZZER:
+- Buzzer positive terminal connected to ESP32 GPIO 14 via 220Ω resistor
+- Buzzer negative terminal connected to GND rail
+
+SERIAL COMMUNICATION (ESP32 to Raspberry Pi):
+- ESP32 GPIO 1 (TX) connected to USB-to-Serial adapter RX pin
+- ESP32 GPIO 3 (RX) connected to USB-to-Serial adapter TX pin
+- ESP32 GND connected to USB-to-Serial adapter GND
+- USB-to-Serial adapter USB connector connected to Raspberry Pi USB port
+(Alternative: ESP32 GPIO 1 → Raspberry Pi GPIO 15, ESP32 GPIO 3 → Raspberry Pi GPIO 14, with common GND)
+
+CAMERA:
+- USB Camera connected directly to Raspberry Pi USB port
+
+VISUAL DETAILS:
+- Use different colors for power rails (red for 5V, black/blue for GND)
+- Label all GPIO pins with numbers (GPIO 2, GPIO 12, GPIO 13, GPIO 14, GPIO 1, GPIO 3)
+- Show ESP32 as a rectangular microcontroller with labeled pins
+- Show Raspberry Pi as a single board computer with visible ports
+- Draw clean connecting lines between components
+- Include component labels and pin labels
+- Show breadboard structure with power rails on sides
+- Add a legend or component list if space allows
+- Use standard electronic symbols where appropriate
+- Make the diagram clear and easy to follow for wiring
+
+LAYOUT SUGGESTION:
+- Place power supply section (12V adapter + LM2596) on the left
+- Center ESP32 with breadboard
+- Place all sensors and actuators around ESP32
+- Place Raspberry Pi on the right
+- Show connections with clear lines and labels
